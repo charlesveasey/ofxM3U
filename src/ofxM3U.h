@@ -1,5 +1,6 @@
 #pragma once
 #include "ofMain.h"
+#include "ofMain.h"
 
 class M3UItem {
     
@@ -20,7 +21,7 @@ public:
 private:
     vector<M3UItem> items;
     ofBuffer buffer;
-    bool isExtended = false;
+    bool isExtended;
     
     void parseExtended(ofBuffer buffer);
     void parseSimple(ofBuffer buffer);

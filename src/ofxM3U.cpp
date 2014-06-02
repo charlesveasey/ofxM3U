@@ -4,6 +4,7 @@
 using Poco::RegularExpression;
 
 void ofxM3U::load(string file){
+	isExtended = false;
     ofBuffer buffer = ofBufferFromFile(file);
     string header;
     
