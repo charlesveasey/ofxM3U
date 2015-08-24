@@ -5,34 +5,46 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9F84DE8B-08B2-4C01-9CA5-B4887951B592</string>
+	<string>6B54E93C-FD71-4958-B16C-2511F448D36E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>11B149A1-E9F2-4649-9F09-1E8369542AFF</key>
+		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
+		<string>https://github.com/charlesveasey/openFrameworks.git</string>
+		<key>4C981E8248911F73B2649605CE06E72A422709D6</key>
 		<string>https://github.com/charlesveasey/ofxM3U.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>example/example.xcodeproj/project.xcworkspace</string>
+	<string>example/example.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>11B149A1-E9F2-4649-9F09-1E8369542AFF</key>
+		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
+		<string>../../../../..</string>
+		<key>4C981E8248911F73B2649605CE06E72A422709D6</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/charlesveasey/ofxM3U.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>11B149A1-E9F2-4649-9F09-1E8369542AFF</string>
+	<string>4C981E8248911F73B2649605CE06E72A422709D6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>11B149A1-E9F2-4649-9F09-1E8369542AFF</string>
+			<string>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C981E8248911F73B2649605CE06E72A422709D6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxM3U</string>
 		</dict>
