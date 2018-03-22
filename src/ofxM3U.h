@@ -23,8 +23,8 @@ private:
     ofBuffer buffer;
     bool isExtended;
     
-    void parseExtended(ofBuffer buffer);
-    void parseSimple(ofBuffer buffer);
+    void parseExtended(ofBuffer::Lines lines);
+    void parseSimple(ofBuffer::Lines lines);
 
     void createExtendedItem(string file, string title, int length);
     void createSimpleItem(string line);
