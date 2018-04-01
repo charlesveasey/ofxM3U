@@ -7,29 +7,35 @@ void ofxM3U::load(string file){
 	isExtended = false;
     ofBuffer buffer = ofBufferFromFile(file);
     string header;
-    
+
+    ofBuffer::Lines lines = buffer.getLines();
+
     if (buffer.size()) {
-        header = trimString(buffer.getNextLine());
+        header = trimString(*lines.begin());
         if (header == "#EXTM3U"){
             isExtended = true;
-            parseExtended(buffer);
+            parseExtended(lines);
         }
         else {
             isExtended = false;
-            parseSimple(buffer);
+            parseSimple(lines);
         }
     }
 }
 
-void ofxM3U::parseExtended(ofBuffer buffer){
+void ofxM3U::parseExtended(ofBuffer::Lines lines){
     string header;
     string line;
     string file;
     string title;
     string length;
 
-    while(buffer.isLastLine() == false) {
-        line = trimString(buffer.getNextLine());
+    ofBuffer::Line iter = lines.begin();
+    // Skip first line
+    iter++;
+
+    while (iter != lines.end()) {
+        line = trimString(*iter++);
         
         if (line.length() > 0) {
             header = line.substr(0, 8);
@@ -37,18 +43,17 @@ void ofxM3U::parseExtended(ofBuffer buffer){
             length = (ofSplitString(line, ",")[0]).substr(8);
             title = line.substr(9+length.size());
             title = trimString(title);
-            line = buffer.getNextLine();
-            file = line;
+            file = *iter++;
             createExtendedItem(file, title, ofToInt(length));
         }
     }
 }
 
-void ofxM3U::parseSimple(ofBuffer buffer){
-    buffer.resetLineReader();
+void ofxM3U::parseSimple(ofBuffer::Lines lines) {
+    ofBuffer::Line iter = lines.begin();
     string line;
-    while(buffer.isLastLine() == false) {
-        line = trimString(buffer.getNextLine());
+    while (iter != lines.end()) {
+        line = trimString(*iter++);
         if (line.length() > 0)
             createSimpleItem(line);
     }
